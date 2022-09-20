@@ -1,0 +1,20 @@
+<style>
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<!-- <h1>Welcome to Trader Clothes!</h1> -->
+
+<div>
+    <input size="60" type="text" [formControl]="searchInput" placeholder="Search">
+    <button (click)="search()">View Search</button>
+    <select [formControl]="dropDownOption" (change)="searchById()">
+        <option value="all">All</option>
+        <option value="1">Shirts</option>
+        <option value="2">Pants</option>
+        <option value="3">Shoes</option>
+        <option value="4">Hats</option>
+        <option value="5">Cardigans</option>
+    </select>
+</div>

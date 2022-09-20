@@ -1,0 +1,37 @@
+nav.page {
+    width: 50%;
+    height: 200px;
+}
+
+p {
+    padding-top: 20px;
+    padding-right: 90px;
+}
+
+.nav-bar{
+    justify-content: space-between
+}
+
+span {
+    padding-right: 10rem;
+}
+
+div.nav{ 
+    margin: auto;       /* do we want this to be in the middle or on the right  */
+    display: flex;
+    flex-direction: row;
+    /* gap: 75px; */
+}
+
+a.check {
+    padding-top: 10px;
+    padding-left: 150px;
+    /* width: 300px;
+    height: auto; */
+}
+
+a.profile {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+

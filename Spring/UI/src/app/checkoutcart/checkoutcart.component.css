@@ -1,0 +1,60 @@
+.nav-bar {
+    justify-content: space-between
+}
+
+a {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    margin: auto;
+    width: 30%;
+}
+
+div.text {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+
+}
+
+span {
+    padding-right: 10rem;
+}
+
+.header {
+    margin-right: 150px;
+
+}
+
+/*
+break between styling because
+*/
+
+img {
+    width: 100%;
+    height: auto;
+}

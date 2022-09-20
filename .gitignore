@@ -1,0 +1,8 @@
+/shelf/
+/workspace.xml
+*.properties
+*.iml
+target/
+idea/
+*.class
+node_modules/

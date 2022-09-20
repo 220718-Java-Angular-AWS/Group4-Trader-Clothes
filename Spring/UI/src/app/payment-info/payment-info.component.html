@@ -1,0 +1,19 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="paymentInfo">
+    <div class = text>
+        <span>{{user?.firstName}} {{user?.lastName}}</span>
+        <br>
+        <span>{{user?.address}}</span>
+        <br>
+        <span *ngIf="!editMode">Card Number: {{user?.cardNumber}}</span> 
+        <br>
+        <span *ngIf="editMode">Card Number: <input type="text" [formControl]="cardNumberInput"></span>   
+    </div>
+    <div>
+        <button (click)="editMode=true">Edit</button>
+        <br>
+        <button (click)="updateCardNumber()">Update Payment Information</button>
+    </div> 
+</div>
+

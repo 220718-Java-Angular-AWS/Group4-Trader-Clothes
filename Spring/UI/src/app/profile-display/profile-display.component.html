@@ -1,0 +1,19 @@
+<!--display an image  -->
+<app-nav-bar></app-nav-bar>
+
+<div class = center>
+<h1> Profile Settings </h1>
+<h2> {{currentUser.firstName}} {{currentUser.lastName}} </h2>
+
+<div class = btn>
+<!-- //<button [routerLink]="['/orderhistory']"> Order History</button> -->
+
+<br>
+
+<button [routerLink]="['/personal-info']"> Personal Information</button>
+
+<br>
+
+<button (click)="onLogOut()"> Log Out </button>
+</div>
+</div>

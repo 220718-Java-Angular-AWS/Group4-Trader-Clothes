@@ -1,0 +1,28 @@
+create table ctlg(
+item_id SERIAL primary key,
+itemprice numeric,
+instock int,
+onsale BOOLEAN,
+itemtype VARCHAR(100),
+brand VARCHAR(100)
+);
+
+create table customer (
+customer_id SERIAL primary key,
+firstname VARCHAR(100) not null,
+lastname VARCHAR(100) not null,
+username VARCHAR(100) UNIQUE not null,
+pass VARCHAR(100) not null,
+cardnumber numeric,
+adress VARCHAR(200)
+);
+
+create table cart (
+price numeric,
+quantity numeric,
+item_id int,
+customer_id int,
+constraint cartfki foreign key (item_id) references ctlg(item_id),
+constraint cartfkc foreign key (customer_id) references customer(customer_id)
+);
+

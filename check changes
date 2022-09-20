@@ -1,0 +1,41 @@
+<<<<<<< rebeccaC
+  Createcart(data: CreateCart): Observable<CreateCart> {
+    console.log("MADE INTO CART SERVICE ")
+    console.log("Data from create cart:", data)
+    return this.http.post<CreateCart>(this.baseurl, JSON.stringify(data), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
+  // GET by id
+  GetcartbyId(cartId: number): Observable<Cart> {
+    return this.http.get<Cart>(this.baseurl + cartId)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
+  GetCartByIdFalseCart(cartId: number): Observable<Cart> {
+    return this.http.get<Cart>(this.baseurl + 'getCartByUserIdPurchaseIsFalse/' + cartId)
+=======
+  Createcart(data: any): Observable<Cart> {
+    return this.http.post<Cart>(this.baseurl , JSON.stringify(data), this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }  
+  
+  GetCartByIdFalseCart(cartId: number): Observable<Cart> {
+    return this.http.get<Cart>(this.baseurl + 'getCartByUserIdPurchaseIsFalse/'+ cartId)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+  
+    // GET by id
+    GetcartbyId(cartId: number): Observable<Cart> {
+      return this.http.get<Cart>(this.baseurl + cartId)
+>>>>>>> j-Spring-Branch

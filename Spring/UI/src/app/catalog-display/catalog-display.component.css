@@ -1,0 +1,22 @@
+.item-wrapper {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    flex-flow: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 15rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 1px 2px 3px 0px black;
+}
+
+img {
+    width: 150px;
+    height: auto;
+}

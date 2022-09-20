@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+<h1>Your Current Cart</h1>
+
+
+<div class="item-wrapper">
+    
+    <div 
+        *ngFor="let item of cartCatalogItems"
+        class="card" >
+        <span>{{item[0].itemName}}</span>
+        <img src="{{item[0].imageURL}}" alt="">
+        <button (click) ="deleteItem(item[0].itemId)"> delete </button>
+        <span> Cost: ${{item[1]}}</span>
+    </div>    
+</div>
+
+<p> Total Cost: $ {{totalCost}}</p>
+
+<button (click) ="buyCart()"> Buy Items In Cart </button>
+<p> {{confirmationCheckout}}</p>
+<button [routerLink]="['/mainMenu']"> Back To Main Menu</button>
+   

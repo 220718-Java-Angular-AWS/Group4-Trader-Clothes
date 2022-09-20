@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+<div class = center *ngIf="catalogItem">
+    <h2> {{catalogItem.itemName}}</h2>
+    <!-- need to display item image  -->
+    <div class = image>
+    <img [src]="srcImage" style="width: 300px;height: 300px;">
+    </div>
+    <div class = quantity>
+    <p class = text> $ {{catalogItem.itemPrice}} Cost Per Item </p>
+    <p class = text> choose quantity </p>
+    <select name="quantity" id="quantity" [(ngModel)]="quantity" (change)="changeQuantity()">
+        <option> 0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+    </select>
+    <p class = text> Total: $ {{purchaseAmount}} Purchase Amount </p>
+    <button class = btn (click)="addItemToCart()"> Add To Cart</button>
+    <p class = text> {{itemAddedToCart}}</p>
+    <button class = btn [routerLink]="['/mainMenu']"> Back</button>
+    </div>
+    <!-- need to route back in button [routerLink]= "['/mainmenu']" -->
+    <!-- item price , quantity box where they can choose the quantity  -->
+    <!-- button for them to add stuff to there cart -->
+</div>

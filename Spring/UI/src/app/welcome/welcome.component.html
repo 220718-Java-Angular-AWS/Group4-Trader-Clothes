@@ -1,0 +1,51 @@
+<h1> Welcome to Trader Clothes! <h1>
+
+<br>
+
+<h3> Enter New User Information</h3>
+
+<div>
+<label for="firstName"> 
+    First Name:  <input type="text" id = "firstName" [(ngModel)] = "firstName"> 
+</label>
+
+<label for="lastName"> 
+    Last Name:  <input type="text" id = "lastName" [(ngModel)] = "lastName"> 
+</label>
+
+<label for="userName"> 
+    Username:  <input type="text" id = "userName" [(ngModel)] = "userName"> 
+</label>
+
+<label for="email"> 
+    Email:  <input type="email" id = "email" [(ngModel)] = "email"> 
+</label>
+
+<label for="password"> 
+    Password:  <input type="password" id = "password" [(ngModel)] = "password">
+</label>
+
+<label for="address"> 
+    Address:  <input type="address" id = "address" [(ngModel)] = "address">
+</label>
+
+<label for="cardNumber"> 
+    Card Number:  <input type="text" id = "cardNumber" [(ngModel)] = "cardNumber"> 
+</label>
+
+</div>
+
+<div class = text>
+    <p>
+        Create Account     <button (click) = "onSignUp()"> Create Account </button>
+    </p>
+
+    <p>
+        Already have an Account?    <button [routerLink]= "['/login']"> Login </button>
+    <p>
+</div>
+
+
+<router-outlet> </router-outlet> <!-- NOT NEEDED-->
+
+
